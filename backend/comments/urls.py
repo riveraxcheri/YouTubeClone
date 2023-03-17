@@ -2,6 +2,7 @@ from django.urls import path, include
 from comments import views
 
 urlpatterns = [
-    path('', views.user_comments),
-    path('', views.get_all_comments),
+    path('all/', views.get_all_comments),
+    path('<str:video_id>', views.get_by_video),
+    path('', views.video_comments),
 ]
