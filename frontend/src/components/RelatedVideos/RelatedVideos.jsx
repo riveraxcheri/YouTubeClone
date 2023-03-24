@@ -1,19 +1,20 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import {KEY} from "./localKey";
 
 
 const RelatedVideos = (props) => {
     const [relatedVideos, setRelatedVideos] = useState([]);
 
     async function fetchRelatedVideos(){
-        let response = await axios.get('https://www.googleapis.com/youtube/v3/search?relatedToVideoId={VIDEO ID HERE}&type=video&key={API KEY HERE}');
+        let response = await axios.get(`https://www.googleapis.com/youtube/v3/search?relatedToVideoId=${id.videoId}&type=video&key=${KEY}&part=snippet`);
         setRelatedVideos(response.data.results);
     }
 
     function mapRelatedVideos(){
         return relatedVideos.map()
     }
-
+    //map videos using their thumbnail (snippet)
     useEffect(()=> {
         let mounted = true;
         if(mounted){

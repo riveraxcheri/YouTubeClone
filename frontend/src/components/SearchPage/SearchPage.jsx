@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import SearchBar from './components/SearchBar'
+import SearchBar from './SearchBar/SearchBar.jsx'
+import {KEY} from "./localKey";
 
 
 const SearchPage = (props) => {
@@ -8,7 +9,7 @@ const SearchPage = (props) => {
     const [filteredVideo, filterVideos] = useState({userInput});
 
     async function fetchVideos(){
-        let response = await axios.get('https://www.googleapis.com/youtube/v3/search?q={SEARCH QUERY HERE}&key={API KEY HERE}');
+        let response = await axios.get(`https://www.googleapis.com/youtube/v3/search?q=${userInput}&key=${KEY}&part=snippet`);
         setVideos(response.data.results);
     }
 
@@ -27,9 +28,12 @@ const SearchPage = (props) => {
     return ( 
         <div>
             <h1>Search for Videos</h1>
-            <SearchBar/>
+            <SearchBar/> 
         </div>
      );
 }
- 
+
+// Search Results appear under search bar in grid
+// Set up onClick to change page to video player page
+
 export default SearchPage;
