@@ -2,6 +2,8 @@
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import "./input.css";
+import React from 'react';
+
 
 // Pages Imports
 // import HomePage from "./pages/HomePage/HomePage";
@@ -11,7 +13,7 @@ import RegisterPage from "./pages/RegisterPage/RegisterPage";
 // Component Imports
 import Navbar from "./components/NavBar/NavBar";
 import Footer from "./components/Footer/Footer";
-import {KEY} from "./localKey";
+// import {KEY} from "./localKey";
 import SearchPage from "./components/SearchPage/SearchPage";
 
 // Util Imports
@@ -19,6 +21,7 @@ import SearchPage from "./components/SearchPage/SearchPage";
 
 
 function App() {
+  
   return (
     <div>
       <Navbar />
@@ -26,7 +29,7 @@ function App() {
         <Route
           path="/"
           element={
-            <SearchPage searchTerm={searchTerm}/>
+            <SearchPage />
           }
         />
         <Route path="/register" element={<RegisterPage />} />

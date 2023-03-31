@@ -1,10 +1,20 @@
 import React from "react";
 
-export default function VideoCard({ video }) {
+const VideoCard = ({ video }) => {
   return (
     <div>
-      <img src={video.snippet.thumbnails.default} />
+      <img src={video.snippet.thumbnails.default} alt="video thumbnail" />
       <h3>{video.snippet.title}</h3>
     </div>
   );
-}
+};
+
+export default VideoCard;
+// export default function VideoCard({ video }) {
+//   return (
+//     <div>
+//       <img src={video.snippet.thumbnails.default} alt= "video thumbnail" />
+//       <h3>{video.snippet.title}</h3>
+//     </div>
+//   );
+// }
