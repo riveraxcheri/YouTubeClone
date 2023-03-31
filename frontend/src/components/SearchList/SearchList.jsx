@@ -4,7 +4,7 @@ import VideoCard from "../VideoCard/VideoCard";
 const SearchList = ({videos}) => {
     return ( 
         <div>
-            {videos.map((el) =>(
+            {videos?.map((el) =>(
                 <VideoCard video={el} />
             ) )}
         </div>
