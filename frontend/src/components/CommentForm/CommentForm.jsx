@@ -1,8 +1,10 @@
-const CommentForm = (props) => {
+
+
+const CommentForm = ({userInput}) => {
     return ( 
         <form>
             <label>Enter Comment</label>
-            <input type={text} name={props.userInput} />
+            <input type={text} name={userInput} />
         </form>
      );
 }

@@ -7,7 +7,7 @@ const VideoPage = () => {
         <div>
             <VideoPlayer/>
             <CommentList/>
-            <RelatedVideos/>
+            <RelatedVideos video={video}/>
         </div>
      );
 }

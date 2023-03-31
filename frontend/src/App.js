@@ -1,9 +1,10 @@
 // General Imports
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
+import "./input.css";
 
 // Pages Imports
-import HomePage from "./pages/HomePage/HomePage";
+// import HomePage from "./pages/HomePage/HomePage";
 import LoginPage from "./pages/LoginPage/LoginPage";
 import RegisterPage from "./pages/RegisterPage/RegisterPage";
 
@@ -14,7 +15,7 @@ import {KEY} from "./localKey";
 import SearchPage from "./components/SearchPage/SearchPage";
 
 // Util Imports
-import PrivateRoute from "./utils/PrivateRoute";
+// import PrivateRoute from "./utils/PrivateRoute";
 
 
 function App() {
@@ -25,7 +26,7 @@ function App() {
         <Route
           path="/"
           element={
-            <SearchPage/>
+            <SearchPage searchTerm={searchTerm}/>
           }
         />
         <Route path="/register" element={<RegisterPage />} />
