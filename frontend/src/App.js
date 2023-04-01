@@ -2,8 +2,7 @@
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import "./input.css";
-import React from 'react';
-
+import React from "react";
 
 // Pages Imports
 // import HomePage from "./pages/HomePage/HomePage";
@@ -20,20 +19,13 @@ import VideoPage from "./components/VideoPage/VideoPage";
 // Util Imports
 // import PrivateRoute from "./utils/PrivateRoute";
 
-
 function App() {
-  
   return (
     <div>
       <Navbar />
       <Routes>
-        <Route
-          path="/"
-          element={
-            <SearchPage />
-          }
-        />
-        <Route path= "/video/:videoId" element={<VideoPage/>}/>
+        <Route path="/" element={<SearchPage />} />
+        <Route path="/video/:videoId" element={<VideoPage />} />
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/login" element={<LoginPage />} />
       </Routes>

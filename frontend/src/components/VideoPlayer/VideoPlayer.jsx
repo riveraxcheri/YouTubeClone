@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 
 const VideoPlayer = ({ videoId, video }) => {
-    useEffect (()=> {}, [videoId, video]) 
+  useEffect(() => {}, [videoId, video]);
   return (
     <div>
       <div>
@@ -15,7 +15,7 @@ const VideoPlayer = ({ videoId, video }) => {
         ></iframe>
       </div>
       <div>
-        <h1>{video&& video?.snippet?.title}</h1>
+        <h1>{video && video?.snippet.title}</h1>
       </div>
       {/* // https://www.youtube.com/embed/VIDEO_ID */}
     </div>

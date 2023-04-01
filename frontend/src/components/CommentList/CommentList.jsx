@@ -1,14 +1,21 @@
-import Comment from "./Comment";
+
+import React from 'react';
+
+import Comment from "../Comment/Comment";
+
+const CommentList = ({ entries }) => {
 
 
-const CommentList = ({comments}) => {
-    return ( 
-        <div>
-            {comments.map((el) => (
-                <Comment comment={el} />
-            )  )}
-        </div>
-     );
-}
- 
+  return (
+    <ul>
+      {entries?.map((el) => (
+        <Comment comment={el} />
+      ))}
+    </ul>
+  );
+};
+
 export default CommentList;
+//need to use key?
+//key={entries.video_id}
+//key={el.id}

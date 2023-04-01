@@ -193,7 +193,7 @@ const SearchPage = () => {
   return (
     <div>
       <h1>Search for Videos</h1>
-      <SearchBar setSearchTerm={setSearchTerm} />
+      <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
       <SearchList videos={videos} />
     </div>
   );
