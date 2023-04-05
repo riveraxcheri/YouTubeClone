@@ -20,8 +20,8 @@ p {
 
 button {
   background-color: transparent;
-  border: 2px solid steelblue;
-  color: steelblue;
+  border: 2px solid hsl(269, 52%, 65%);
+  color:hsl(269, 52%, 65%) ;
   font-size: 1rem;
   font-family: inherit;
   max-width: 100px;
@@ -31,7 +31,7 @@ button {
 button:hover {
   cursor: pointer;
   color: white;
-  background-color: steelblue;
+  background-color: hsl(269, 52%, 65%);
 }
 
 .container {

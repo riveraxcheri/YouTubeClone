@@ -27,6 +27,7 @@ const RelatedVideos = ({video}) => {
   return (
     <div>
       <h1>Related Videos</h1>
+      <button onClick={fetchRelatedVideos}>Get Videos</button>
     </div>
   );
 };

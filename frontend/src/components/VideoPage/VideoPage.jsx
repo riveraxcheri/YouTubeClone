@@ -5,7 +5,7 @@ import CommentForm from "../CommentForm/CommentForm.jsx";
 import { useState } from "react";
 import axios from "axios";
 
-const VideoPage = () => {
+const VideoPage = ({getComments, addNewComment}) => {
   const [videoId, setVideoId] = useState("RqzGzwTY-6w");
   const [video, setVideo] = useState();
   const [comments, setComments] = useState([]);
@@ -47,7 +47,7 @@ const VideoPage = () => {
       <button onClick={getVideo}>Get Video</button>
       <VideoPlayer videoId={videoId} video={video} />
       <CommentForm
-        addNewCommentProp={addNewComment}
+        addNewComment={addNewComment}
         getComments={getComments}
       />
       <CommentList
